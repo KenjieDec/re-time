@@ -1,5 +1,5 @@
 {
-  "name": "re-time",
+  "name": "re-times",
   "version": "1.0.0",
   "description": "Return 1 Number into time ( up to Aeon )",
   "main": "index.js",
@@ -8,5 +8,13 @@
     "start": "node index.js"
   },
   "author": "Poor_RBs",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenjieDec/re-time.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KenjieDec/re-time/issues"
+  },
+  "homepage": "https://github.com/KenjieDec/re-time#readme"
 }
