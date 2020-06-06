@@ -1,0 +1,12 @@
+{
+  "name": "re-time",
+  "version": "1.0.0",
+  "description": "Return 1 Number into time ( up to Aeon )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Poor_RBs",
+  "license": "ISC"
+}
