@@ -642,8 +642,74 @@ const number = (value) => {
     }
 };
 
+const seconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond*1000
+}
+const minutes = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*60
+}
+const hours = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*3600
+}
+const days = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*86400
+}
+const weeks = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*604800
+}
+const months = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*2628000
+}
+const years = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*31556952
+}
+const decades = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*315400000
+}
+const centuries = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*3153600000
+}
+const millenniums = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*31540000000
+}
+const aeons = (millisecond) => {
+    if(millisecond < 1) return;
+    var sec = millisecond*1000
+    return sec*31536000000000000
+}
+
 module.exports = {
     string,
     number,
     text,
+    seconds,
+    minutes,
+    hours,
+    days,
+    weeks,
+    months,
+    years,
+    decades,
+    centuries,
+    millenniums,
+    aeons
 }
