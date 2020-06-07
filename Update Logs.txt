@@ -19,3 +19,8 @@ Added Femtosecond (fs)
 Added Picosecond (ps)
 Added Nanosecond (ns)
 Added Microsecond (μs)
+
+1.0.5
+Added shortcut for usage "Turn specified time to Milliseconds ( Up to Aeons )"
+Updated Description
+Updated README.md

@@ -718,78 +718,296 @@ const number = (value) => {
     }
 };
 
-const attoseconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond/1000000000000000000
+const attoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000
 }
-const femtoseconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond/1000000000000000
+const femtoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000
 }
-const picoseconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond/1000000000000
+const picoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000
 }
-const nanoseconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond/1000000
+const nanoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000
 }
-const microseconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond/1000000
+const microseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000
 }
-const seconds = (millisecond) => {
-    if(millisecond < 1) return;
-    return millisecond*1000
+const seconds = (second) => {
+    if(second < 1) return;
+    return second*1000
 }
-const minutes = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const minutes = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*60
 }
-const hours = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const hours = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*3600
 }
-const days = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const days = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*86400
 }
-const weeks = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const weeks = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*604800
 }
-const months = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const months = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*2628000
 }
-const years = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const years = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*31556952
 }
-const decades = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const decades = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*315400000
 }
-const centuries = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const centuries = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*3153600000
 }
-const millenniums = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const millenniums = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*31540000000
 }
-const aeons = (millisecond) => {
-    if(millisecond < 1) return;
-    var sec = millisecond*1000
+const aeons = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31536000000000000
+}
+
+const attoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000
+}
+const femtoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000
+}
+const picoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000
+}
+const nanoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const microseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const seconds = (second) => {
+    if(second < 1) return;
+    return second*1000
+}
+const minutes = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*60
+}
+const hours = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3600
+}
+const days = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*86400
+}
+const weeks = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*604800
+}
+const months = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*2628000
+}
+const years = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31556952
+}
+const decades = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*315400000
+}
+const centuries = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3153600000
+}
+const millenniums = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31540000000
+}
+const aeons = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31536000000000000
+}
+const attosecond = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000
+}
+const femtosecond = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000
+}
+const picosecond = (second) => {
+    if(second < 1) return;
+    return second/1000000000000
+}
+const nanosecond = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const microsecond = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const second = (second) => {
+    if(second < 1) return;
+    return second*1000
+}
+const minute = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*60
+}
+const hour = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3600
+}
+const day = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*86400
+}
+const week = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*604800
+}
+const month = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*2628000
+}
+const year = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31556952
+}
+const decade = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*315400000
+}
+const century = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3153600000
+}
+const millennium = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31540000000
+}
+const aeon = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31536000000000000
+}
+const as = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000
+}
+const fs = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000
+}
+const ps = (second) => {
+    if(second < 1) return;
+    return second/1000000000000
+}
+const ns = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const μs = (second) => {
+    if(second < 1) return;
+    return second/1000000
+}
+const s = (second) => {
+    if(second < 1) return;
+    return second*1000
+}
+const min = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*60
+}
+const hr = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3600
+}
+const wk = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*604800
+}
+const mo = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*2628000
+}
+const yr = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31556952
+}
+const dec = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*315400000
+}
+const cent = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*3153600000
+}
+const mill = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
+    return sec*31540000000
+}
+const eon = (second) => {
+    if(second < 1) return;
+    var sec = second*1000
     return sec*31536000000000000
 }
 
@@ -797,6 +1015,22 @@ module.exports = {
     string,
     number,
     text,
+    attosecond,
+    femtosecond,
+    picosecond,
+    nanosecond,
+    microsecond,
+    second,
+    minute,
+    hour,
+    day,
+    week,
+    month,
+    year,
+    decade,
+    century,
+    millennium,
+    aeon,
     attoseconds,
     femtoseconds,
     picoseconds,
@@ -812,5 +1046,20 @@ module.exports = {
     decades,
     centuries,
     millenniums,
-    aeons
+    aeons,
+    as,
+    fs,
+    ps,
+    ns,
+    μs,
+    s,
+    min,
+    hr,
+    wk,
+    mo,
+    yr,
+    dec,
+    cent,
+    mill,
+    eon,
 }

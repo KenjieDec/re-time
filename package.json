@@ -1,7 +1,7 @@
 {
   "name": "re-times",
-  "version": "1.0.4",
-  "description": "Return 1 Number into time ( up to Aeon )",
+  "version": "1.0.5",
+  "description": "Return Number in seconds to millisecond ( up to Aeon )",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
