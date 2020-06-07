@@ -1,32 +1,39 @@
-### RE-TIMES
+# RE-TIMES
+Use re-times to turn number into time in **String** or **Milliseconds**
 
-## WHAT IS RE-TIMES?
-Re-Times is a package that helps you to change number to times, Up to Aeon(eon)!
+## Function
+* Turn second to Milliseconds
+* Turn Time ( Number in Second ) to Text Up to 
 
-## How to use
-# Code:
+## Example:
 ```js
 const retimes = require("re-times");
-///Convert To Time in Number
-console.log(retimes.number(value))
-///Convert To Time in Text
-console.log(retimes.number(string))
-```
-# Example:
-```js
-const retimes = require("re-times");
-///Convert To Time in Number
-console.log(retimes.number(1)) // 1000 ( 1 second )
-console.log(retimes.number(60)) // 60000 ( 1 minute )
-//Up to 1eon ( 1 Aeon )
+///Turn Number to Time in Milliseconds
+retimes.number(1) // 1000 ( 1 second )
+retimes.number(60) // 60000 ( 1 minute )
 
-///Convert To Time in Text
-console.log(retimes.number(1)) // 1s
-console.log(retimes.number(60)) // 1min
-//Up to 1eon ( 1 Aeon )
+
+///Turn Number to Time in Text
+retimes.text(1) // 1s
+retimes.text(60) // 1min
+``` 
+
+## More Information:
+```
+s = Seconds
+min = Minutes
+hr = Hours
+day = Days
+wk = Week
+mo = Months
+yr = Years
+dec = Decades
+cent = Centuries
+mill = Milleniums
+eon = Aeons
 ```
 
-## Download
+## Install Cmd
 ```
 npm i --save re-times
 ```
