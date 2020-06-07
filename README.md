@@ -16,6 +16,8 @@ retimes.number(60) // 60000 ( 1 minute )
 ///Turn Number to Time in Text
 retimes.text(1) // 1s
 retimes.text(60) // 1min
+retimes.text(1, true) // 1 Second
+retimes.text(60, true) // 1 Minute
 ``` 
 
 ## More Information:
