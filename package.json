@@ -1,6 +1,6 @@
 {
   "name": "re-times",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Return 1 Number into time ( up to Aeon )",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/KenjieDec/re-time.git"
   },
+  "keywords": [
+    "time",
+    "second",
+    "re-time",
+    "retime"
+  ],
   "bugs": {
     "url": "https://github.com/KenjieDec/re-time/issues"
   },

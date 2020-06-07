@@ -3,7 +3,30 @@ const string = (value, op) => {
     var time = 0
     timenum = value;
        if(op === true){
-            if(timenum >= 1 && timenum < 60){
+        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+            var timev = `${timenum*1000000000000000000} Attoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
+            return timev;
+        }else if(timenum >= 0.000000000000001 && timenum < 0.000000000001){
+            var timev = `${timenum*1000000000000000000} Femtoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Femtosecond`
+            return timev;
+        }else if(timenum >= 0.000000000001 && timenum < 0.000000001){
+            var timev = `${timenum*1000000000000000000} Picoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Picosecond`
+            return timev;
+        }else if(timenum >= 0.000000001 && timenum < 0.0000001){
+            var timev = `${timenum*1000000000000000000} Nanoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Nanosecond`
+            return timev;
+        }else if(timenum >= 0.0000001 && timenum < 1){
+            var timev = `${timenum*1000000000000000000} Microseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Microsecond`
+            return timev;
+        }else if(timenum == 0){
+            var timev = `0 Second`
+            return timev;
+        }else if(timenum >= 1 && timenum < 60){
                 var timev = `${timenum}second`
                 if(timenum > 1) var timev = `${timenum} seconds`;
                 return timev;
@@ -263,7 +286,22 @@ const string = (value, op) => {
               }
             }
         }else{
-        if(timenum >= 1 && timenum < 60){
+        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+            var timev = `${timenum*1000000000000000000}as`
+            return timev;
+        }else if(timenum >= 0.000000000000001 && timenum < 0.000000000001){
+            var timev = `${timenum*1000000000000000}fs`
+            return timev;
+        }else if(timenum >= 0.000000000001 && timenum < 0.000000001){
+            var timev = `${timenum*1000000000000}ps`
+            return timev;
+        }else if(timenum >= 0.000000001 && timenum < 0.0000001){
+            var timev = `${timenum*1000000000}ns`
+            return timev;
+        }else if(timenum >= 0.0000001 && timenum < 1){
+            var time = `${timenum*1000}μs`
+            return timev;
+        }else if(timenum >= 1 && timenum < 60){
             var timev = `${timenum}s`
             return timev;
         }else if(timenum >= 60 && timenum < 3600){
@@ -305,7 +343,30 @@ const text = (value, op) => {
     var time = 0
     timenum = value;
        if(op === true){
-            if(timenum >= 1 && timenum < 60){
+        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+            var timev = `${timenum*1000000000000000000} Attoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
+            return timev;
+        }else if(timenum >= 0.000000000000001 && timenum < 0.000000000001){
+            var timev = `${timenum*1000000000000000000} Femtoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Femtosecond`
+            return timev;
+        }else if(timenum >= 0.000000000001 && timenum < 0.000000001){
+            var timev = `${timenum*1000000000000000000} Picoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Picosecond`
+            return timev;
+        }else if(timenum >= 0.000000001 && timenum < 0.0000001){
+            var timev = `${timenum*1000000000000000000} Nanoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Nanosecond`
+            return timev;
+        }else if(timenum >= 0.0000001 && timenum < 1){
+            var timev = `${timenum*1000000000000000000} Microseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000} Microsecond`
+            return timev;
+        }else if(timenum == 0){
+            var timev = `0 Second`
+            return timev;
+        }else if(timenum >= 1 && timenum < 60){
                 var timev = `${timenum}second`
                 if(timenum > 1) var timev = `${timenum} seconds`;
                 return timev;
@@ -565,7 +626,22 @@ const text = (value, op) => {
               }
             }
         }else{
-        if(timenum >= 1 && timenum < 60){
+        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+            var timev = `${timenum*1000000000000000000}as`
+            return timev;
+        }else if(timenum >= 0.000000000000001 && timenum < 0.000000000001){
+            var timev = `${timenum*1000000000000000}fs`
+            return timev;
+        }else if(timenum >= 0.000000000001 && timenum < 0.000000001){
+            var timev = `${timenum*1000000000000}ps`
+            return timev;
+        }else if(timenum >= 0.000000001 && timenum < 0.0000001){
+            var timev = `${timenum*1000000000}ns`
+            return timev;
+        }else if(timenum >= 0.0000001 && timenum < 1){
+            var time = `${timenum*1000}μs`
+            return timev;
+        }else if(timenum >= 1 && timenum < 60){
             var timev = `${timenum}s`
             return timev;
         }else if(timenum >= 60 && timenum < 3600){
@@ -605,7 +681,7 @@ const text = (value, op) => {
 const number = (value) => {
 
     timenum = value
-
+    
     if(timenum >= 1 && timenum < 60){
         var time = timenum*1000
         return time;
@@ -637,11 +713,31 @@ const number = (value) => {
         var time = timenum*1000
         return time;
     }else if(timenum >= 31536000000000000){
-        var time = timenum
+        var time = timenum*1000
         return time;
     }
 };
 
+const attoseconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond/1000000000000000000
+}
+const femtoseconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond/1000000000000000
+}
+const picoseconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond/1000000000000
+}
+const nanoseconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond/1000000
+}
+const microseconds = (millisecond) => {
+    if(millisecond < 1) return;
+    return millisecond/1000000
+}
 const seconds = (millisecond) => {
     if(millisecond < 1) return;
     return millisecond*1000
@@ -701,6 +797,11 @@ module.exports = {
     string,
     number,
     text,
+    attoseconds,
+    femtoseconds,
+    picoseconds,
+    nanoseconds,
+    microseconds,
     seconds,
     minutes,
     hours,

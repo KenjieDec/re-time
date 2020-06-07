@@ -1,0 +1,21 @@
+1.0.0
+The Start of re-times!
+
+1.0.1 ( Not Published on npm )
+Fixed Bugs and Updated Usage.
+
+1.0.2
+Updated README.md
+Added retimes.text in index.js
+
+1.0.3
+Turn number to time ( Up to Aeons )
+
+1.0.4
+Fixed retimes.number( >= 31536000000000000)
+package.json keywords
+Added Attosecond (as)
+Added Femtosecond (fs)
+Added Picosecond (ps)
+Added Nanosecond (ns)
+Added Microsecond (μs)
