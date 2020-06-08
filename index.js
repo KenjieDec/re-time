@@ -1,7 +1,8 @@
 const string = (value, op) => {
 
-    if(value.startsWith('-')) return;
     if(isNaN(value)) return;
+    const negat = Math.sign(value)
+    if(negat == -1) return;
     var time = 0
     var time = 0
     timenum = value;
@@ -354,8 +355,10 @@ const string = (value, op) => {
 
 const text = (value, op) => {
 
-    if(value.startsWith('-')) return;
     if(isNaN(value)) return;
+    const negat = Math.sign(value)
+    if(negat == -1) return;
+    var time = 0
     var time = 0
     timenum = value;
        if(op === true){
