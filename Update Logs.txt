@@ -24,3 +24,6 @@ Added Microsecond (μs)
 Added shortcut for usage "Turn specified time to Milliseconds ( Up to Aeons )"
 Updated Description
 Updated README.md
+
+1.0.6
+Fixed "  Identifier 'attoseconds' has already been declared  "
