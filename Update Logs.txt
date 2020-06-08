@@ -27,3 +27,6 @@ Updated README.md
 
 1.0.6
 Fixed "  Identifier 'attoseconds' has already been declared  "
+
+1.0.7
+Remove decimal part | Math.round()

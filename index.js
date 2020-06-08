@@ -1,5 +1,8 @@
 const string = (value, op) => {
 
+    if(value.startsWith('-')) return;
+    if(isNaN(value)) return;
+    var time = 0
     var time = 0
     timenum = value;
        if(op === true){
@@ -68,7 +71,7 @@ const string = (value, op) => {
             }else if(timenum >= 3600 && timenum < 86400){
                 var timev = ``
                 var timevv = timenum / 3600
-                var time = Math.floor(timevv / 60)
+                var time = Math.round(timevv / 60)
                 var time2 = timenum % 60
                 var name = "Hours"
                 var secondname = "Minutes"
@@ -118,7 +121,7 @@ const string = (value, op) => {
             }else if(timenum >= 86400 && timenum < 604800){
                 var timev = ``
                 var timevv = timenum % 86400
-                var time = Math.floor(timevv / 3600)
+                var time = Math.round(timevv / 3600)
                 var name = "Days"
                 var secondname = "Hours"
                 var timenumcut = timenum/86400
@@ -298,41 +301,52 @@ const string = (value, op) => {
         }else if(timenum >= 0.000000001 && timenum < 0.0000001){
             var timev = `${timenum*1000000000}ns`
             return timev;
-        }else if(timenum >= 0.0000001 && timenum < 1){
-            var time = `${timenum*1000}μs`
+        }else if(timenum >= 0.000001 && timenum < 1){
+            var timev = `${timenum*1000000}μs`
             return timev;
         }else if(timenum >= 1 && timenum < 60){
-            var timev = `${timenum}s`
+            var time = Math.round(timenum)
+            var timev = `${time}s`
             return timev;
         }else if(timenum >= 60 && timenum < 3600){
-            var timev = `${timenum/60}min`
+            var time = Math.round(timenum/60)
+            var timev = `${time}min`
             return timev;
         }else if(timenum >= 3600 && timenum < 86400){
-            var timev = `${timenum/3600}hr`
+            var time = Math.round(timenum/3600)
+            var timev = `${time}hr`
             return timev;
         }else if(timenum >= 86400 && timenum < 604800){
-            var timev = `${timenum/86400}day`
+            var time = Math.round(timenum/86400)
+            var timev = `${time}day`
             return timev;
         }else if(timenum >= 604800 && timenum < 2628000){
-            var timev = `${timenum/604800}wk`
+            var time = Math.round(timenum/604800)
+            var timev = `${time}wk`
             return timev;
         }else if(timenum >= 2628000 && timenum < 31556952){
-            var timev = `${timenum/2628000}mo`
+            var time = Math.round(timenum/2628000)
+            var timev = `${time}mo`
             return timev;
         }else if(timenum >= 31556952 && timenum < 3153600000){
-            var timev = `${timenum/31556952}yr`
+            var time = Math.round(timenum/31556952)
+            var timev = `${time}yr`
             return timev;
         }else if(timenum >= 315400000 && timenum < 315400000){
-            var timev = `${timenum/315400000}dec`
+            var time = Math.round(timenum/315400000)
+            var timev = `${time}dec`
             return timev;
         }else if(timenum >= 3153600000 && timenum < 31540000000){
-            var timev = `${timenum/3153600000}cent`
-
+            var time = Math.round(timenum/3153600000)
+            var timev = `${time}cent`
+            return timev;
         }else if(timenum >= 31540000000 && timenum < 31536000000000000){
-            var timev = `${timenum/31540000000}mill`
+            var time = Math.round(timenum/31540000000)
+            var timev = `${time}mill`
             return timev;
         }else if(timenum >= 31536000000000000){
-            var timev = `${timenum/31536000000000000}eon`
+            var time = Math.round(timenum/31536000000000000)
+            var timev = `${time}eon`
             return timev;
         }
     }
@@ -340,6 +354,8 @@ const string = (value, op) => {
 
 const text = (value, op) => {
 
+    if(value.startsWith('-')) return;
+    if(isNaN(value)) return;
     var time = 0
     timenum = value;
        if(op === true){
@@ -408,7 +424,7 @@ const text = (value, op) => {
             }else if(timenum >= 3600 && timenum < 86400){
                 var timev = ``
                 var timevv = timenum / 3600
-                var time = Math.floor(timevv / 60)
+                var time = Math.round(timevv / 60)
                 var time2 = timenum % 60
                 var name = "Hours"
                 var secondname = "Minutes"
@@ -458,7 +474,7 @@ const text = (value, op) => {
             }else if(timenum >= 86400 && timenum < 604800){
                 var timev = ``
                 var timevv = timenum % 86400
-                var time = Math.floor(timevv / 3600)
+                var time = Math.round(timevv / 3600)
                 var name = "Days"
                 var secondname = "Hours"
                 var timenumcut = timenum/86400
@@ -638,41 +654,52 @@ const text = (value, op) => {
         }else if(timenum >= 0.000000001 && timenum < 0.0000001){
             var timev = `${timenum*1000000000}ns`
             return timev;
-        }else if(timenum >= 0.0000001 && timenum < 1){
-            var time = `${timenum*1000}μs`
+        }else if(timenum >= 0.000001 && timenum < 1){
+            var timev = `${timenum*1000000}μs`
             return timev;
         }else if(timenum >= 1 && timenum < 60){
-            var timev = `${timenum}s`
+            var time = Math.round(timenum)
+            var timev = `${time}s`
             return timev;
         }else if(timenum >= 60 && timenum < 3600){
-            var timev = `${timenum/60}min`
+            var time = Math.round(timenum/60)
+            var timev = `${time}min`
             return timev;
         }else if(timenum >= 3600 && timenum < 86400){
-            var timev = `${timenum/3600}hr`
+            var time = Math.round(timenum/3600)
+            var timev = `${time}hr`
             return timev;
         }else if(timenum >= 86400 && timenum < 604800){
-            var timev = `${timenum/86400}day`
+            var time = Math.round(timenum/86400)
+            var timev = `${time}day`
             return timev;
         }else if(timenum >= 604800 && timenum < 2628000){
-            var timev = `${timenum/604800}wk`
+            var time = Math.round(timenum/604800)
+            var timev = `${time}wk`
             return timev;
         }else if(timenum >= 2628000 && timenum < 31556952){
-            var timev = `${timenum/2628000}mo`
+            var time = Math.round(timenum/2628000)
+            var timev = `${time}mo`
             return timev;
         }else if(timenum >= 31556952 && timenum < 3153600000){
-            var timev = `${timenum/31556952}yr`
+            var time = Math.round(timenum/31556952)
+            var timev = `${time}yr`
             return timev;
         }else if(timenum >= 315400000 && timenum < 315400000){
-            var timev = `${timenum/315400000}dec`
+            var time = Math.round(timenum/315400000)
+            var timev = `${time}dec`
             return timev;
         }else if(timenum >= 3153600000 && timenum < 31540000000){
-            var timev = `${timenum/3153600000}cent`
-
+            var time = Math.round(timenum/3153600000)
+            var timev = `${time}cent`
+            return timev;
         }else if(timenum >= 31540000000 && timenum < 31536000000000000){
-            var timev = `${timenum/31540000000}mill`
+            var time = Math.round(timenum/31540000000)
+            var timev = `${time}mill`
             return timev;
         }else if(timenum >= 31536000000000000){
-            var timev = `${timenum/31536000000000000}eon`
+            var time = Math.round(timenum/31536000000000000)
+            var timev = `${time}eon`
             return timev;
         }
     }
