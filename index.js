@@ -750,15 +750,15 @@ const number = (value) => {
 
 const attoseconds = (second) => {
     if(second < 1) return;
-    return second/1000000000000000000
+    return second/1000000000000000
 }
 const femtoseconds = (second) => {
     if(second < 1) return;
-    return second/1000000000000000
+    return second/1000000000000
 }
 const picoseconds = (second) => {
     if(second < 1) return;
-    return second/1000000000000
+    return second/1000000000
 }
 const nanoseconds = (second) => {
     if(second < 1) return;
@@ -766,7 +766,7 @@ const nanoseconds = (second) => {
 }
 const microseconds = (second) => {
     if(second < 1) return;
-    return second/1000000
+    return second/1000
 }
 const seconds = (second) => {
     if(second < 1) return;
@@ -824,15 +824,15 @@ const aeons = (second) => {
 }
 const attosecond = (second) => {
     if(second < 1) return;
-    return second/1000000000000000000
+    return second/1000000000000000
 }
 const femtosecond = (second) => {
     if(second < 1) return;
-    return second/1000000000000000
+    return second/1000000000000
 }
 const picosecond = (second) => {
     if(second < 1) return;
-    return second/1000000000000
+    return second/1000000000
 }
 const nanosecond = (second) => {
     if(second < 1) return;
@@ -840,7 +840,7 @@ const nanosecond = (second) => {
 }
 const microsecond = (second) => {
     if(second < 1) return;
-    return second/1000000
+    return second/1000
 }
 const second = (second) => {
     if(second < 1) return;
@@ -898,15 +898,15 @@ const aeon = (second) => {
 }
 const as = (second) => {
     if(second < 1) return;
-    return second/1000000000000000000
+    return second/1000000000000000
 }
 const fs = (second) => {
     if(second < 1) return;
-    return second/1000000000000000
+    return second/1000000000000
 }
 const ps = (second) => {
     if(second < 1) return;
-    return second/1000000000000
+    return second/1000000000
 }
 const ns = (second) => {
     if(second < 1) return;
@@ -914,7 +914,7 @@ const ns = (second) => {
 }
 const μs = (second) => {
     if(second < 1) return;
-    return second/1000000
+    return second/1000
 }
 const s = (second) => {
     if(second < 1) return;

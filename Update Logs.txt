@@ -33,3 +33,6 @@ Remove decimal part | Math.round()
 
 1.0.8
 Not Important, README.md Information Fix
+
+1.0.9
+retimes.as until retimes.μs Fixed Amount!
