@@ -30,3 +30,6 @@ Fixed "  Identifier 'attoseconds' has already been declared  "
 
 1.0.7
 Remove decimal part | Math.round()
+
+1.0.8
+Not Important, README.md Information Fix

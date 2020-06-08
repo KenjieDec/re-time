@@ -7,6 +7,7 @@ Use re-times to turn number into time in **String** or **Milliseconds**
 * Turn specified time to Milliseconds ( Up to Aeons )
 
 ## Example:
+** Turn Number to Time **
 ```js
 const retimes = require("re-times");
 ///Turn Number to Time in Milliseconds
@@ -21,15 +22,16 @@ retimes.text(1, true) // 1 Second
 retimes.text(60, true) // 1 Minute
 
 ``` 
+** Turn Number to specified time in Milliseconds ( Up to Aeons ) **
 ```js
 const retimes = require("re-times");
 
 ///Turn Number to specified time in Milliseconds ( Up to Aeons )
-retimes.as(1) // 0.000000000000000001
-retimes.fs(1) // 0.000000000000001
-retimes.ps(1) // 0.000000000001
-retimes.ns(1) // 0.000000001
-retimes.μs(1) // 0.000001
+retimes.as(1) // 0.000000000000001
+retimes.fs(1) // 0.000000000001
+retimes.ps(1) // 0.000000001
+retimes.ns(1) // 0.000001
+retimes.μs(1) // 0.001
 retimes.s(1) // 1000
 retimes.min(1) // 60000
 retimes.hr(1) // 3600000
