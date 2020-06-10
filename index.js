@@ -6,7 +6,7 @@ const string = (value, op) => {
     var time = 0
     var time = 0
     timenum = value;
-       if(op === true){
+       if(op === true || op === 1){
         if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
             var timev = `${timenum*1000000000000000000} Attoseconds`
             if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
@@ -31,7 +31,7 @@ const string = (value, op) => {
             var timev = `0 Second`
             return timev;
         }else if(timenum >= 1 && timenum < 60){
-                var timev = `${timenum}second`
+                var timev = `${timenum} second`
                 if(timenum > 1) var timev = `${timenum} seconds`;
                 return timev;
             }else if(timenum >= 60 && timenum < 3600){
@@ -361,7 +361,7 @@ const text = (value, op) => {
     var time = 0
     var time = 0
     timenum = value;
-       if(op === true){
+       if(op === true || op === 1){
         if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
             var timev = `${timenum*1000000000000000000} Attoseconds`
             if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
@@ -386,7 +386,7 @@ const text = (value, op) => {
             var timev = `0 Second`
             return timev;
         }else if(timenum >= 1 && timenum < 60){
-                var timev = `${timenum}second`
+                var timev = `${timenum} second`
                 if(timenum > 1) var timev = `${timenum} seconds`;
                 return timev;
             }else if(timenum >= 60 && timenum < 3600){

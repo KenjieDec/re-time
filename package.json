@@ -1,6 +1,6 @@
 {
   "name": "re-times",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Return Number in seconds to millisecond ( up to Aeon )",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
     "time",
     "second",
     "re-time",
-    "retime"
+    "retime",
+    "retimes"
   ],
   "bugs": {
     "url": "https://github.com/KenjieDec/re-time/issues"
