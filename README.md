@@ -26,7 +26,7 @@ retimes.text(1, 1) // 1 Second
 retimes.text(60, 1) // 1 Minute
 
 ``` 
-** Turn Number to specified time in Milliseconds ( Up to Aeons ) **
+**Turn Number to specified time in Milliseconds ( Up to Aeons )**
 ```js
 const retimes = require("re-times");
 
