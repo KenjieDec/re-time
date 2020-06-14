@@ -40,3 +40,6 @@ retimes.as until retimes.μs Fixed Amount!
 1.1.0
 retimes.string(1, 1)
 retimes.text(1, 1)
+
+1.1.1
+Testing ( retimes.set ) 

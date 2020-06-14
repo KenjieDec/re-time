@@ -966,6 +966,12 @@ const eon = (second) => {
     return sec*31536000000000000
 }
 
+const set = (text) => {
+    if(text == 1){
+
+    }
+}
+
 module.exports = {
     string,
     number,
