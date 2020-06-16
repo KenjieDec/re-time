@@ -986,7 +986,6 @@ function set(text) {
     const items = time.set(numtex)
     return datatimes;
 }
-console.log(set('1ps'))
 
 module.exports = {
     string,
