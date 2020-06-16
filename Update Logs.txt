@@ -43,3 +43,7 @@ retimes.text(1, 1)
 
 1.1.1
 Testing ( retimes.set ) 
+
+1.1.2
+Turn text into Milliseconds Added
+Fixed retimes.(time)

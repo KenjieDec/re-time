@@ -774,53 +774,53 @@ const seconds = (second) => {
 }
 const minutes = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*60
+
+    return second*60
 }
 const hours = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3600
+
+    return second*3600
 }
 const days = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*86400
+
+    return second*86400
 }
 const weeks = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*604800
+
+    return second*604800
 }
 const months = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*2628000
+
+    return second*2628000
 }
 const years = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31556952
+
+    return second*31556952
 }
 const decades = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*315400000
+
+    return second*315400000
 }
 const centuries = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3153600000
+
+    return second*3153600000
 }
 const millenniums = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31540000000
+
+    return second*31540000000
 }
 const aeons = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31536000000000000
+
+    return second*31536000000000000
 }
 const attosecond = (second) => {
     if(second < 1) return;
@@ -848,53 +848,53 @@ const second = (second) => {
 }
 const minute = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*60
+
+    return second*60
 }
 const hour = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3600
+
+    return second*3600
 }
 const day = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*86400
+
+    return second*86400
 }
 const week = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*604800
+
+    return second*604800
 }
 const month = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*2628000
+
+    return second*2628000
 }
 const year = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31556952
+
+    return second*31556952
 }
 const decade = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*315400000
+
+    return second*315400000
 }
 const century = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3153600000
+
+    return second*3153600000
 }
 const millennium = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31540000000
+
+    return second*31540000000
 }
 const aeon = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31536000000000000
+
+    return second*31536000000000000
 }
 const as = (second) => {
     if(second < 1) return;
@@ -922,54 +922,87 @@ const s = (second) => {
 }
 const min = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*60
+
+    return second*60
 }
 const hr = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3600
+
+    return second*3600
 }
 const wk = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*604800
+
+    return second*604800
 }
 const mo = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*2628000
+
+    return second*2628000
 }
 const yr = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31556952
+
+    return second*31556952
 }
 const dec = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*315400000
+
+    return second*315400000
 }
 const cent = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*3153600000
+
+    return second*3153600000
 }
 const mill = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31540000000
+
+    return second*31540000000
 }
 const eon = (second) => {
     if(second < 1) return;
-    var sec = second*1000
-    return sec*31536000000000000
+
+    return second*31536000000000000
 }
 
-const set = (text) => {
-    if(text == 1){
-
+function set(text) {
+    const { existsSync } = require('fs')
+    var titem = text.toLowerCase()
+	var w = titem.replace(/[0-9]/g, '');
+    let s = w.split(" ").join("")
+    let ss = s
+    if(ss == 'century') ss = 'centuries'
+    if(!ss == ss.endsWith('s')) ss = `${ss}s`
+    const exi = `smo/${ss}.js`
+    if(!existsSync(exi)) throw TypeError(`Can't find specified time`)
+    const time = require(`./smo/${ss}`)
+    var item = 1
+    if(ss == 'minutes'){
+        item = 60
+    }else if(ss == 'hours'){
+        item = 3600
+    }else if(ss == 'days'){
+        item = 86400
+    }else if(ss == 'weeks'){
+        item = 604800
+    }else if(ss == 'months'){
+        item = 2628000
+    }else if(ss == 'years'){
+        item = 31556952
+    }else if(ss == 'decades'){
+        item = 315400000
+    }else if(ss == 'centuries'){
+        item = 3153600000
+    }else if(ss == 'millenniums'){
+        item = 31540000000
+    }else if(ss == 'aeons'){
+        item = 31536000000000000
     }
+    var num = parseInt(text)
+    var numtex = num + " " + s
+    const items = time.set(numtex)
+    return items*item;
 }
 
 module.exports = {
@@ -1024,3 +1057,6 @@ module.exports = {
     mill,
     eon,
 }
+
+module.exports = set
+
