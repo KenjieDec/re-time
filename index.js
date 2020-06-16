@@ -968,42 +968,25 @@ const eon = (second) => {
 
 function set(text) {
     const { existsSync } = require('fs')
+    var shortcut = require('./sdata/shortc')
+    var datatime = require('./sdata/datatime')
     var titem = text.toLowerCase()
 	var w = titem.replace(/[0-9]/g, '');
     let s = w.split(" ").join("")
-    let ss = s
+    let ss = shortcut.item(s)
+
     if(ss == 'century') ss = 'centuries'
     if(!ss == ss.endsWith('s')) ss = `${ss}s`
     const exi = `smo/${ss}.js`
     if(!existsSync(exi)) throw TypeError(`Can't find specified time`)
+    const datatimes = datatime(ss)
     const time = require(`./smo/${ss}`)
-    var item = 1
-    if(ss == 'minutes'){
-        item = 60
-    }else if(ss == 'hours'){
-        item = 3600
-    }else if(ss == 'days'){
-        item = 86400
-    }else if(ss == 'weeks'){
-        item = 604800
-    }else if(ss == 'months'){
-        item = 2628000
-    }else if(ss == 'years'){
-        item = 31556952
-    }else if(ss == 'decades'){
-        item = 315400000
-    }else if(ss == 'centuries'){
-        item = 3153600000
-    }else if(ss == 'millenniums'){
-        item = 31540000000
-    }else if(ss == 'aeons'){
-        item = 31536000000000000
-    }
     var num = parseInt(text)
     var numtex = num + " " + s
     const items = time.set(numtex)
-    return items*item;
+    return datatimes;
 }
+console.log(set('1ps'))
 
 module.exports = {
     string,

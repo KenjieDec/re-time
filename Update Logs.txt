@@ -47,3 +47,7 @@ Testing ( retimes.set )
 1.1.2
 Turn text into Milliseconds Added
 Fixed retimes.(time)
+
+1.1.3
+Added shortcuts on retimes('1 second') can be retimes('1s')
+Added another time type below second

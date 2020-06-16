@@ -55,6 +55,7 @@ retimes.eon(1) /// 31536000000000000000
 ```js
 const retimes = require("re-times");
 
+retimes('1s')
 retimes('1 Second') /// 1000
 retimes('2 Seconds') /// 2000
 /// and the rest
