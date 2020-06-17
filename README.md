@@ -1,6 +1,12 @@
 # RE-TIMES
 Use re-times to turn number into time in **String** or **Milliseconds**
 
+# Note from Owner:
+```
+Sorry for previous errors, version 1.1.3 and 1.1.4 is version that shows unexpected errors.
+I updated re-times to 1.1.5 with fixed errors and added zeptosecond!
+Thaks for installing re-times! See ya!
+```
 ## Function
 * Turn second to Milliseconds
 * Turn Time ( Number in Second ) to Text Up to 

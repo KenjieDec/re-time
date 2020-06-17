@@ -8,7 +8,11 @@ const string = (value, op) => {
     var time = 0
     timenum = value;
        if(op === true || op === 1){
-        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+        if(timenum >= 0.000000000000000000001 && timenum < 0.000000000000000001){
+            var timev = `${timenum*1000000000000000000000} Xeptoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000000} Zeptosecond`
+            return timev;
+        }else if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
             var timev = `${timenum*1000000000000000000} Attoseconds`
             if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
             return timev;
@@ -363,7 +367,11 @@ const text = (value, op) => {
     var time = 0
     timenum = value;
        if(op === true || op === 1){
-        if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
+        if(timenum >= 0.000000000000000000001 && timenum < 0.000000000000000001){
+            var timev = `${timenum*1000000000000000000000} Xeptoseconds`
+            if(timev == 1) timev = `${timenum*1000000000000000000000} Zeptosecond`
+            return timev;
+        }else if(timenum >= 0.000000000000000001 && timenum < 0.000000000000001){
             var timev = `${timenum*1000000000000000000} Attoseconds`
             if(timev == 1) timev = `${timenum*1000000000000000000} Attosecond`
             return timev;
