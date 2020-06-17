@@ -720,7 +720,7 @@ const text = (value, op) => {
 const number = (value) => {
 
     timenum = value
-    
+
     if(timenum >= 1 && timenum < 60){
         var time = timenum*1000
         return time;
@@ -996,7 +996,7 @@ function set(text) {
     if(ss == 'century') ss = 'centuries'
     if(!ss == ss.endsWith('s')) ss = `${ss}s`
     const exi = `node_modules/re-times/smo/${ss}.js`
-    if(!existsSync(exi)) throw TypeError(`Can't find specified time`)
+    if(!existsSync(exi)) throw TypeError(`Can't find specified time, please contact owner on Discord ( PBRs#8817 ) for errors`)
     const datatimes = datatime(ss)
     const time = require(`./smo/${ss}`)
     var num = parseInt(text)

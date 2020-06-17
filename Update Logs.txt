@@ -57,3 +57,6 @@ More shortcut
 
 1.1.5
 Less shortcut, fixed those goddamn errors
+
+1.1.6
+Nothing changed, only Readme.md
