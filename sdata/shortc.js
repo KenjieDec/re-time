@@ -22,8 +22,18 @@ const item = (text) => {
         return ss = 'days'
     }else if(ss == 'wk' || ss == 'w'){ 
         return ss = 'weeks'
-    }else if(ss == 'wk' || ss == 'w'){ 
-        return ss = 'weeks'
+    }else if(ss == 'mo'){ 
+        return ss = 'months'
+    }else if(ss == 'yr' || ss == 'y'){ 
+        return ss = 'years'
+    }else if(ss == 'dec'){ 
+        return ss = 'decades'
+    }else if(ss == 'cent' || ss == 'c'){ 
+        return ss = 'centuries'
+    }else if(ss == 'mill'){ 
+        return ss = 'millenniums'
+    }else if(ss == 'eon'){ 
+        return ss = 'aeons'
     }
 }
 
