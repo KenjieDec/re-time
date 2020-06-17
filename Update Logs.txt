@@ -53,4 +53,7 @@ Added shortcuts on retimes('1 second') can be retimes('1s')
 Added another time type below second
 
 1.1.4
-More Shortcut
+More shortcut
+
+1.1.5
+Less shortcut, fixed those goddamn errors

@@ -4,14 +4,12 @@ const set = (text) => {
 var w = titem.replace(/[0-9]/g, '');
   let s = w.split(" ").join("")
   let yes = item*1000;
-  if(item < 60 && item == 1){
+  if(item == 1){
       return yes;
   }else if(item > 1){
     throw TypeError('That\'s more than a day!')
   }else if(item < 7 && item > 1){
     return yes;
-  }else if(item <= 1){
-    throw TypeError('That\'s even less than 2 days!')
   }else if(item == 7){
     throw TypeError('That\'s a week!')
   }else if(s == "days" && item > 7){

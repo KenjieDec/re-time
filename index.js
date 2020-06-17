@@ -1,3 +1,4 @@
+
 const string = (value, op) => {
 
     if(isNaN(value)) return;
@@ -747,7 +748,10 @@ const number = (value) => {
         return time;
     }
 };
-
+const zeptoseconds = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000
+}
 const attoseconds = (second) => {
     if(second < 1) return;
     return second/1000000000000000
@@ -821,6 +825,10 @@ const aeons = (second) => {
     if(second < 1) return;
 
     return second*31536000000000000
+}
+const zeptosecond = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000;
 }
 const attosecond = (second) => {
     if(second < 1) return;
@@ -896,6 +904,10 @@ const aeon = (second) => {
 
     return second*31536000000000000
 }
+const zs = (second) => {
+    if(second < 1) return;
+    return second/1000000000000000000;
+}
 const as = (second) => {
     if(second < 1) return;
     return second/1000000000000000
@@ -965,7 +977,6 @@ const eon = (second) => {
 
     return second*31536000000000000
 }
-
 function set(text) {
     const { existsSync } = require('fs')
     var shortcut = require('./sdata/shortc')
@@ -973,11 +984,10 @@ function set(text) {
     var titem = text.toLowerCase()
 	var w = titem.replace(/[0-9]/g, '');
     let s = w.split(" ").join("")
-    let ss = shortcut.item(s)
-
+    let ss = shortcut.item(s) || s
     if(ss == 'century') ss = 'centuries'
     if(!ss == ss.endsWith('s')) ss = `${ss}s`
-    const exi = `smo/${ss}.js`
+    const exi = `node_modules/re-times/smo/${ss}.js`
     if(!existsSync(exi)) throw TypeError(`Can't find specified time`)
     const datatimes = datatime(ss)
     const time = require(`./smo/${ss}`)
@@ -991,6 +1001,7 @@ module.exports = {
     string,
     number,
     text,
+    zeptosecond,
     attosecond,
     femtosecond,
     picosecond,
@@ -1007,6 +1018,7 @@ module.exports = {
     century,
     millennium,
     aeon,
+    zeptoseconds,
     attoseconds,
     femtoseconds,
     picoseconds,
@@ -1023,6 +1035,7 @@ module.exports = {
     centuries,
     millenniums,
     aeons,
+    zs,
     as,
     fs,
     ps,
@@ -1038,7 +1051,6 @@ module.exports = {
     cent,
     mill,
     eon,
+    set,
 }
-
-module.exports = set
 

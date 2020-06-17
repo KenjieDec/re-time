@@ -1,7 +1,9 @@
 const item = (text) => {
     var item = 1
     var ss = text
-    if(ss == 'attoseconds'){
+    if(ss == 'zeptoseconds'){
+        item = 0.000000000000000000001
+    }else if(ss == 'attoseconds'){
         item = 0.000000000000000001
     }else if(ss == 'femtoseconds'){
         item = 0.000000000000001
