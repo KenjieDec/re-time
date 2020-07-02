@@ -1,8 +1,8 @@
-
-const string = (value, op) => {
+var retimes = {
+string: function(value, op) {
 
     if(isNaN(value)) return;
-    const negat = Math.sign(value)
+    negat = Math.sign(value)
     if(negat == -1) return;
     var time = 0
     var time = 0
@@ -356,12 +356,12 @@ const string = (value, op) => {
             return timev;
         }
     }
-};
+},
 
-const text = (value, op) => {
+text: function(value, op) {
 
     if(isNaN(value)) return;
-    const negat = Math.sign(value)
+    negat = Math.sign(value)
     if(negat == -1) return;
     var time = 0
     var time = 0
@@ -715,9 +715,9 @@ const text = (value, op) => {
             return timev;
         }
     }
-};
+},
 
-const number = (value) => {
+number: function (value) {
 
     timenum = value
 
@@ -755,310 +755,258 @@ const number = (value) => {
         var time = timenum*1000
         return time;
     }
-};
-const zeptoseconds = (second) => {
+},
+zeptoseconds: function (second) {
     if(second < 1) return;
     return second/1000000000000000000
-}
-const attoseconds = (second) => {
+},
+attoseconds: function (second) {
     if(second < 1) return;
     return second/1000000000000000
-}
-const femtoseconds = (second) => {
+},
+femtoseconds: function (second) {
     if(second < 1) return;
     return second/1000000000000
-}
-const picoseconds = (second) => {
+},
+picoseconds: function (second) {
     if(second < 1) return;
     return second/1000000000
-}
-const nanoseconds = (second) => {
+},
+nanoseconds: function (second) {
     if(second < 1) return;
     return second/1000000
-}
-const microseconds = (second) => {
+},
+microseconds: function (second) {
     if(second < 1) return;
     return second/1000
-}
-const seconds = (second) => {
+},
+seconds: function (second) {
     if(second < 1) return;
     return second*1000
-}
-const minutes = (second) => {
+},
+minutes: function (second) {
     if(second < 1) return;
 
     return second*60
-}
-const hours = (second) => {
+},
+hours: function (second) {
     if(second < 1) return;
 
     return second*3600
-}
-const days = (second) => {
+},
+days: function (second) {
     if(second < 1) return;
 
     return second*86400
-}
-const weeks = (second) => {
+},
+weeks: function (second) {
     if(second < 1) return;
 
     return second*604800
-}
-const months = (second) => {
+},
+months: function (second) {
     if(second < 1) return;
 
     return second*2628000
-}
-const years = (second) => {
+},
+years: function (second) {
     if(second < 1) return;
 
     return second*31556952
-}
-const decades = (second) => {
+},
+decades: function (second) {
     if(second < 1) return;
 
     return second*315400000
-}
-const centuries = (second) => {
+},
+centuries: function (second) {
     if(second < 1) return;
 
     return second*3153600000
-}
-const millenniums = (second) => {
+},
+millenniums: function (second) {
     if(second < 1) return;
 
     return second*31540000000
-}
-const aeons = (second) => {
+},
+aeons: function (second) {
     if(second < 1) return;
 
     return second*31536000000000000
-}
-const zeptosecond = (second) => {
+},
+zeptosecond: function (second) {
     if(second < 1) return;
     return second/1000000000000000000;
-}
-const attosecond = (second) => {
+},
+attosecond: function (second) {
     if(second < 1) return;
     return second/1000000000000000
-}
-const femtosecond = (second) => {
+},
+femtosecond: function (second) {
     if(second < 1) return;
     return second/1000000000000
-}
-const picosecond = (second) => {
+},
+picosecond: function (second) {
     if(second < 1) return;
     return second/1000000000
-}
-const nanosecond = (second) => {
+},
+nanosecond: function (second) {
     if(second < 1) return;
     return second/1000000
-}
-const microsecond = (second) => {
+},
+microsecond: function (second) {
     if(second < 1) return;
     return second/1000
-}
-const second = (second) => {
+},
+second: function (second) {
     if(second < 1) return;
     return second*1000
-}
-const minute = (second) => {
+},
+minute: function (second) {
     if(second < 1) return;
 
     return second*60
-}
-const hour = (second) => {
+},
+hour: function (second) {
     if(second < 1) return;
 
     return second*3600
-}
-const day = (second) => {
+},
+day: function (second) {
     if(second < 1) return;
 
     return second*86400
-}
-const week = (second) => {
+},
+week: function (second) {
     if(second < 1) return;
 
     return second*604800
-}
-const month = (second) => {
+},
+month: function (second) {
     if(second < 1) return;
 
     return second*2628000
-}
-const year = (second) => {
+},
+year: function (second) {
     if(second < 1) return;
 
     return second*31556952
-}
-const decade = (second) => {
+},
+decade: function (second) {
     if(second < 1) return;
 
     return second*315400000
-}
-const century = (second) => {
+},
+century: function (second) {
     if(second < 1) return;
 
     return second*3153600000
-}
-const millennium = (second) => {
+},
+millennium: function (second) {
     if(second < 1) return;
 
     return second*31540000000
-}
-const aeon = (second) => {
+},
+aeon: function (second) {
     if(second < 1) return;
 
     return second*31536000000000000
-}
-const zs = (second) => {
+},
+zs: function (second) {
     if(second < 1) return;
-    return second/1000000000000000000;
-}
-const as = (second) => {
+    return second/1000000000000000000
+},
+as: function (second) {
     if(second < 1) return;
     return second/1000000000000000
-}
-const fs = (second) => {
+},
+fs: function (second) {
     if(second < 1) return;
     return second/1000000000000
-}
-const ps = (second) => {
+},
+ps: function (second) {
     if(second < 1) return;
     return second/1000000000
-}
-const ns = (second) => {
+},
+ns: function (second) {
     if(second < 1) return;
     return second/1000000
-}
-const μs = (second) => {
+},
+μs: function (second) {
     if(second < 1) return;
     return second/1000
-}
-const s = (second) => {
+},
+s: function (second) {
     if(second < 1) return;
     return second*1000
-}
-const min = (second) => {
+},
+min: function (second) {
     if(second < 1) return;
 
     return second*60
-}
-const hr = (second) => {
+},
+hr: function (second) {
     if(second < 1) return;
 
     return second*3600
-}
-const wk = (second) => {
+},
+wk: function (second) {
     if(second < 1) return;
 
     return second*604800
-}
-const mo = (second) => {
+},
+mo: function (second) {
     if(second < 1) return;
 
     return second*2628000
-}
-const yr = (second) => {
+},
+yr: function (second) {
     if(second < 1) return;
 
     return second*31556952
-}
-const dec = (second) => {
+},
+dec: function (second) {
     if(second < 1) return;
 
     return second*315400000
-}
-const cent = (second) => {
+},
+cent: function (second) {
     if(second < 1) return;
 
     return second*3153600000
-}
-const mill = (second) => {
+},
+mill: function (second) {
     if(second < 1) return;
 
     return second*31540000000
-}
-const eon = (second) => {
+},
+eon: function (second) {
     if(second < 1) return;
 
     return second*31536000000000000
-}
-function set(text) {
+},
+set: function(text) {
+    const digits_only = string => [...string].every(c => '0123456789+-=?/`\\[]{}()*&^%$#@!~`><.,'.includes(c));
+    if(text.length == 1 || digits_only(text)) throw TypeError(`Can't find specified time Type.`)
     const { existsSync } = require('fs')
     var shortcut = require('./sdata/shortc')
     var datatime = require('./sdata/datatime')
     var titem = text.toLowerCase()
 	var w = titem.replace(/[0-9]/g, '');
     let s = w.split(" ").join("")
-    let ss = shortcut.item(s) || s
+    let ss = shortcut.item(s)
     if(ss == 'century') ss = 'centuries'
     if(!ss == ss.endsWith('s')) ss = `${ss}s`
     const exi = `node_modules/re-times/smo/${ss}.js`
-    if(!existsSync(exi)) throw TypeError(`Can't find specified time, please contact owner on Discord ( PBRs#8817 ) for errors`)
+    if(!existsSync(exi)) throw TypeError(`Can't find specified time, please contact owner on Discord ( PBRs#8817 ) for errors!`)
     const datatimes = datatime(ss)
     const time = require(`./smo/${ss}`)
     var num = parseInt(text)
     var numtex = num + " " + s
     const items = time.set(numtex)
     return datatimes;
+    },
+    
 }
 
-module.exports = {
-    string,
-    number,
-    text,
-    zeptosecond,
-    attosecond,
-    femtosecond,
-    picosecond,
-    nanosecond,
-    microsecond,
-    second,
-    minute,
-    hour,
-    day,
-    week,
-    month,
-    year,
-    decade,
-    century,
-    millennium,
-    aeon,
-    zeptoseconds,
-    attoseconds,
-    femtoseconds,
-    picoseconds,
-    nanoseconds,
-    microseconds,
-    seconds,
-    minutes,
-    hours,
-    days,
-    weeks,
-    months,
-    years,
-    decades,
-    centuries,
-    millenniums,
-    aeons,
-    zs,
-    as,
-    fs,
-    ps,
-    ns,
-    μs,
-    s,
-    min,
-    hr,
-    wk,
-    mo,
-    yr,
-    dec,
-    cent,
-    mill,
-    eon,
-    set,
-}
-
+module.exports = retimes
