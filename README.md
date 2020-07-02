@@ -4,7 +4,7 @@ Use re-times to turn number into time in **String** or **Milliseconds**
 # Note from Owner:
 ```
 Sorry for previous errors, version 1.1.3 and 1.1.4 is version that show unexpected errors.
-I updated re-times to 1.1.5 and 1.1.6 with fixed errors and added zeptosecond!
+I updated re-times to 1.1.5 and the next versions with fixed errors and added zeptosecond!
 Thanks for installing re-times! See ya!
 ```
 ## Function
@@ -38,6 +38,7 @@ retimes.text(60, 1) // 1 Minute
 const retimes = require("re-times");
 
 ///Turn Number to specified time in Milliseconds ( Up to Aeons )
+retimes.zs(1) // 0.000000000000000001
 retimes.as(1) // 0.000000000000001
 retimes.fs(1) // 0.000000000001
 retimes.ps(1) // 0.000000001
@@ -69,6 +70,7 @@ retimes.set('2 Seconds') /// 2000
 
 ## More Information:
 ```
+zs = Zeptoseconds
 as = Attoseconds
 fs = Femtoseconds
 ps = Picoseconds
