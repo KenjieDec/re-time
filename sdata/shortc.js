@@ -34,6 +34,8 @@ const item = (text) => {
         return ss = 'millenniums'
     }else if(ss == 'eon'){ 
         return ss = 'aeons'
+    }else{
+        return ss;
     }
 }
 
